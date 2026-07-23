@@ -1,59 +1,76 @@
-# Portfolio
+# Portfolio V2
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.19.
+Personal portfolio of **Amine Benselem** — Software Engineer based in Tunisia.
 
-## Development server
+**Live site:** [https://aminebenselem.github.io/portfolioV2/](https://aminebenselem.github.io/portfolioV2/)
 
-To start a local development server, run:
+[![GitHub Pages](https://img.shields.io/badge/demo-live-e85d2c?style=flat-square)](https://aminebenselem.github.io/portfolioV2/)
+[![Angular](https://img.shields.io/badge/Angular-21-DD0031?style=flat-square&logo=angular&logoColor=white)](https://angular.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## About
 
-## Code scaffolding
+A clean, single-page portfolio showcasing:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Professional experience (AutoApp Solutions, internships, game development)
+- Personal projects (coding sessions, marketplace, university platform, and more)
+- Skills across Java, Spring Boot, Angular, React, Next.js, and modern data stacks
+- Education at TEK-UP Ariana and ISTIC Borj Cédria
 
-```bash
-ng generate component component-name
-```
+## Tech stack
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+| Layer | Tools |
+| --- | --- |
+| Framework | Angular 21 (standalone) |
+| Styling | Tailwind CSS 4 + custom design tokens |
+| Typography | Syne · Outfit |
+| Deploy | GitHub Pages via `angular-cli-ghpages` |
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Quick start
 
 ```bash
-ng test
+git clone https://github.com/aminebenselem/portfolioV2.git
+cd portfolioV2
+npm install
+npm start
 ```
 
-## Running end-to-end tests
+Open [http://localhost:4200](http://localhost:4200).
 
-For end-to-end (e2e) testing, run:
+## Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm start` | Local development server |
+| `npm run build` | Production build |
+| `npm test` | Unit tests |
+| `npm run deploy` | Build and publish to GitHub Pages |
+
+## Deploy to GitHub Pages
+
+This project is configured for the repo **`portfolioV2`** under **`aminebenselem`**.
+
+1. Push your code to `https://github.com/aminebenselem/portfolioV2`
+2. Run:
 
 ```bash
-ng e2e
+npm run deploy
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+3. In the GitHub repo: **Settings → Pages → Source** → select the `gh-pages` branch (root).
+4. Visit: [https://aminebenselem.github.io/portfolioV2/](https://aminebenselem.github.io/portfolioV2/)
 
-## Additional Resources
+The production build uses `baseHref` `/portfolioV2/` so assets and routes resolve correctly on GitHub Pages.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Contact
+
+- **Email:** [aminebenselem09@gmail.com](mailto:aminebenselem09@gmail.com)
+- **GitHub:** [github.com/aminebenselem](https://github.com/aminebenselem)
+- **LinkedIn:** [amine-benselem](https://www.linkedin.com/in/amine-benselem-2a143b255/)
+- **Portfolio:** [aminebenselem.github.io/portfolioV2](https://aminebenselem.github.io/portfolioV2/)
+
+---
+
+© Amine Benselem
