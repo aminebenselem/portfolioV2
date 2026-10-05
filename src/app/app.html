@@ -1,3 +1,4 @@
+
 <a class="skip-link" href="#work">Skip to experience</a>
 
 <header class="site-header" [class.is-scrolled]="scrolled()">
@@ -30,205 +31,601 @@
       @for (link of navLinks; track link.href) {
         <a [href]="link.href" (click)="closeMenu()">{{ link.label }}</a>
       }
+
       <a href="#contact" (click)="closeMenu()">Hire me</a>
     </nav>
   }
 </header>
 
 <main id="top">
+
+  <!-- HERO -->
   <section class="hero" aria-labelledby="hero-name">
+
     <div class="hero__atmosphere" aria-hidden="true">
       <div class="hero-visual">
         <div class="hero-visual__glow"></div>
         <div class="hero-visual__grid"></div>
-        <svg class="hero-visual__diagram" viewBox="0 0 800 900" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M80 120h240v160H80V120Zm280 80h200v280H360V200Zm-200 220h160v280H160V420Zm400 40h160v200H560V460Z" stroke="currentColor" stroke-width="1.25" opacity="0.35" />
-          <path d="M200 200v220M440 340v120M280 560h280M640 560v-100" stroke="currentColor" stroke-width="1" opacity="0.25" stroke-dasharray="4 6" />
-          <circle cx="200" cy="200" r="5" fill="var(--ember)" />
-          <circle cx="440" cy="340" r="5" fill="var(--teal)" />
-          <circle cx="560" cy="560" r="5" fill="var(--ember)" />
-          <text x="100" y="100" fill="currentColor" opacity="0.4" font-family="var(--font-body)" font-size="14">spring.boot</text>
-          <text x="380" y="180" fill="currentColor" opacity="0.4" font-family="var(--font-body)" font-size="14">react.ui</text>
-          <text x="180" y="400" fill="currentColor" opacity="0.4" font-family="var(--font-body)" font-size="14">next.js</text>
-          <text x="580" y="440" fill="currentColor" opacity="0.4" font-family="var(--font-body)" font-size="14">postgres</text>
+
+        <svg
+          class="hero-visual__diagram"
+          viewBox="0 0 800 900"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M80 120h240v160H80V120Zm280 80h200v280H360V200Zm-200 220h160v280H160V420Zm400 40h160v200H560V460Z"
+            stroke="currentColor"
+            stroke-width="1.25"
+            opacity="0.35"
+          />
+
+          <path
+            d="M200 200v220M440 340v120M280 560h280M640 560v-100"
+            stroke="currentColor"
+            stroke-width="1"
+            opacity="0.25"
+            stroke-dasharray="4 6"
+          />
+
+          <circle
+            cx="200"
+            cy="200"
+            r="5"
+            fill="var(--ember)"
+          />
+
+          <circle
+            cx="440"
+            cy="340"
+            r="5"
+            fill="var(--teal)"
+          />
+
+          <circle
+            cx="560"
+            cy="560"
+            r="5"
+            fill="var(--ember)"
+          />
+
+          <text
+            x="100"
+            y="100"
+            fill="currentColor"
+            opacity="0.4"
+            font-family="var(--font-body)"
+            font-size="14"
+          >
+            spring.boot
+          </text>
+
+          <text
+            x="380"
+            y="180"
+            fill="currentColor"
+            opacity="0.4"
+            font-family="var(--font-body)"
+            font-size="14"
+          >
+            angular
+          </text>
+
+          <text
+            x="180"
+            y="400"
+            fill="currentColor"
+            opacity="0.4"
+            font-family="var(--font-body)"
+            font-size="14"
+          >
+            websocket
+          </text>
+
+          <text
+            x="580"
+            y="440"
+            fill="currentColor"
+            opacity="0.4"
+            font-family="var(--font-body)"
+            font-size="14"
+          >
+            postgres
+          </text>
         </svg>
       </div>
     </div>
 
     <div class="hero__content">
-      <p class="hero__role animate-rise">{{ role }}
+
+      <p class="hero__role animate-rise">
+        {{ role }}
       </p>
-      <h1 id="hero-name" class="hero__name animate-rise animate-rise-delay-1">{{ name }}</h1>
+
+      <h1
+        id="hero-name"
+        class="hero__name animate-rise animate-rise-delay-1"
+      >
+        {{ name }}
+      </h1>
+
       <p class="hero__lede animate-rise animate-rise-delay-2">
-        Software engineer from Tunisia — shipping SaaS platforms, mobile apps, and AI-assisted tools with Spring Boot, Angular, and Next.js.
+        Software engineer from Tunisia focused on backend systems,
+        distributed infrastructure, and real-time applications —
+        building with Spring Boot, Go, WebSockets, PostgreSQL, and Redis.
       </p>
+
       <div class="hero__actions animate-rise animate-rise-delay-3">
-        <a class="btn btn--primary" href="#work">View experience</a>
-        <a class="btn btn--ghost" href="#contact">Get in touch</a>
+        <a
+          class="btn btn--primary"
+          href="#projects"
+        >
+          View projects
+        </a>
+
+        <a
+          class="btn btn--ghost"
+          href="#contact"
+        >
+          Get in touch
+        </a>
       </div>
+
     </div>
 
-    <div class="hero__scroll animate-rise animate-rise-delay-4" aria-hidden="true">
+    <div
+      class="hero__scroll animate-rise animate-rise-delay-4"
+      aria-hidden="true"
+    >
       <span>Scroll</span>
       <div class="hero__scroll-line"></div>
     </div>
+
   </section>
 
-  <section id="work" class="section work" aria-labelledby="work-heading">
+
+  <!-- EXPERIENCE -->
+  <section
+    id="work"
+    class="section work"
+    aria-labelledby="work-heading"
+  >
+
     <div class="section__intro">
-      <p class="section__eyebrow">Experience</p>
-      <h2 id="work-heading">Where I’ve shipped</h2>
-      <p class="section__lede">
-        From automotive SaaS to broadcasting intranets and 3D games — building full-stack products across Tunisia.
+
+      <p class="section__eyebrow">
+        Experience
       </p>
+
+      <h2 id="work-heading">
+        Where I’ve shipped
+      </h2>
+
+      <p class="section__lede">
+        From automotive SaaS to broadcasting intranets and 3D games —
+        building full-stack products across Tunisia.
+      </p>
+
     </div>
 
+
     <ul class="project-list">
-      @for (job of experience; track job.company + job.period; let i = $index) {
+
+      @for (
+        job of experience;
+        track job.company + job.period;
+        let i = $index
+      ) {
+
         <li>
+
           <div class="project">
-            <span class="project__index">0{{ i + 1 }}</span>
+
+            <span class="project__index">
+              0{{ i + 1 }}
+            </span>
+
             <div class="project__body">
+
               <div class="project__top">
-                <h3>{{ job.role }}</h3>
-                <time>{{ job.period }}</time>
+
+                <h3>
+                  {{ job.role }}
+                </h3>
+
+                <time>
+                  {{ job.period }}
+                </time>
+
               </div>
-              <p class="project__meta">{{ job.company }} · {{ job.location }}</p>
-              <p>{{ job.description }}</p>
+
+              <p class="project__meta">
+                {{ job.company }} · {{ job.location }}
+              </p>
+
+              <p>
+                {{ job.description }}
+              </p>
+
               <ul class="project__tags">
-                @for (tag of job.tags; track tag) {
-                  <li>{{ tag }}</li>
+
+                @for (
+                  tag of job.tags;
+                  track tag
+                ) {
+
+                  <li>
+                    {{ tag }}
+                  </li>
+
                 }
+
               </ul>
+
             </div>
+
           </div>
+
         </li>
+
       }
+
     </ul>
+
   </section>
 
-  <section id="projects" class="section work" aria-labelledby="projects-heading">
+
+  <!-- PERSONAL PROJECTS -->
+  <section
+    id="projects"
+    class="section work"
+    aria-labelledby="projects-heading"
+  >
+
     <div class="section__intro">
-      <p class="section__eyebrow">Personal projects</p>
-      <h2 id="projects-heading">Built on my own time</h2>
-      <p class="section__lede">
-        Side projects spanning live coding classrooms, marketplaces, campus platforms, and e-learning.
+
+      <p class="section__eyebrow">
+        Personal projects
       </p>
+
+      <h2 id="projects-heading">
+        Systems I’ve built
+      </h2>
+
+      <p class="section__lede">
+        Backend systems, distributed infrastructure, and real-time
+        applications built to explore how production software works
+        beyond the framework level.
+      </p>
+
     </div>
 
+
     <ul class="project-list">
-      @for (project of projects; track project.title; let i = $index) {
+
+      @for (
+        project of projects;
+        track project.title;
+        let i = $index
+      ) {
+
         <li>
+
           <div class="project">
-            <span class="project__index">0{{ i + 1 }}</span>
+
+            <span class="project__index">
+              0{{ i + 1 }}
+            </span>
+
             <div class="project__body">
+
               <div class="project__top">
-                <h3>{{ project.title }}</h3>
+
+                <h3>
+                  {{ project.title }}
+                </h3>
+
               </div>
-              <p>{{ project.description }}</p>
+
+              <p>
+                {{ project.description }}
+              </p>
+
               <ul class="project__tags">
-                @for (tag of project.tags; track tag) {
-                  <li>{{ tag }}</li>
+
+                @for (
+                  tag of project.tags;
+                  track tag
+                ) {
+
+                  <li>
+                    {{ tag }}
+                  </li>
+
                 }
+
               </ul>
+
             </div>
+
           </div>
+
         </li>
+
       }
+
     </ul>
+
   </section>
 
-  <section id="about" class="section about" aria-labelledby="about-heading">
+
+  <!-- ABOUT -->
+  <section
+    id="about"
+    class="section about"
+    aria-labelledby="about-heading"
+  >
+
     <div class="about__grid">
+
       <div class="section__intro">
-        <p class="section__eyebrow">About</p>
-        <h2 id="about-heading">Engineer by training, builder by practice</h2>
-        <p class="section__lede">
-          I’m {{ fullName }}, studying software engineering and information systems at TEK-UP Ariana.
-          I work across backend services, Angular and React frontends, and mobile with React Native — plus Docker, PostgreSQL, and Neo4j when the data model demands it.
+
+        <p class="section__eyebrow">
+          About
         </p>
+
+        <h2 id="about-heading">
+          Engineer by training, builder by practice
+        </h2>
+
+        <p class="section__lede">
+          I’m {{ fullName }}, a software engineer based in Tunisia
+          with a focus on backend development and distributed systems.
+          I build applications with Spring Boot and Go, work with
+          PostgreSQL and Redis, and build real-time systems using
+          WebSockets. I also work across Angular and React when
+          building complete products end to end.
+        </p>
+
       </div>
+
 
       <div class="about__panels">
-        <div class="stack-block">
-          <h3>Languages</h3>
-          <ul class="stack-list">
-            @for (item of languagesCode; track item) {
-              <li>{{ item }}</li>
-            }
-          </ul>
-        </div>
 
+        <!-- LANGUAGES -->
         <div class="stack-block">
-          <h3>Frameworks</h3>
-          <ul class="stack-list">
-            @for (item of frameworks; track item) {
-              <li>{{ item }}</li>
-            }
-          </ul>
-        </div>
 
-        <div class="stack-block">
-          <h3>Tools</h3>
-          <ul class="stack-list">
-            @for (item of tools; track item) {
-              <li>{{ item }}</li>
-            }
-          </ul>
-        </div>
+          <h3>
+            Languages
+          </h3>
 
-        <div class="experience-block">
-          <h3>Education</h3>
-          <ul class="experience-list">
-            @for (item of education; track item.school) {
+          <ul class="stack-list">
+
+            @for (
+              item of languagesCode;
+              track item
+            ) {
+
               <li>
-                <div class="experience-list__meta">
-                  <strong>{{ item.degree }}</strong>
-                  <span>{{ item.period }}</span>
-                </div>
-                <p class="experience-list__company">{{ item.school }}</p>
+                {{ item }}
               </li>
+
             }
+
           </ul>
+
         </div>
 
-        <div class="experience-block">
-          <h3>Spoken languages</h3>
-          <ul class="experience-list">
-            @for (lang of spokenLanguages; track lang.name) {
+
+        <!-- FRAMEWORKS -->
+        <div class="stack-block">
+
+          <h3>
+            Frameworks
+          </h3>
+
+          <ul class="stack-list">
+
+            @for (
+              item of frameworks;
+              track item
+            ) {
+
               <li>
-                <div class="experience-list__meta">
-                  <strong>{{ lang.name }}</strong>
-                  <span>{{ lang.level }}</span>
-                </div>
+                {{ item }}
               </li>
+
             }
+
           </ul>
+
         </div>
+
+
+        <!-- TOOLS -->
+        <div class="stack-block">
+
+          <h3>
+            Tools
+          </h3>
+
+          <ul class="stack-list">
+
+            @for (
+              item of tools;
+              track item
+            ) {
+
+              <li>
+                {{ item }}
+              </li>
+
+            }
+
+          </ul>
+
+        </div>
+
+
+        <!-- EDUCATION -->
+        <div class="experience-block">
+
+          <h3>
+            Education
+          </h3>
+
+          <ul class="experience-list">
+
+            @for (
+              item of education;
+              track item.school
+            ) {
+
+              <li>
+
+                <div class="experience-list__meta">
+
+                  <strong>
+                    {{ item.degree }}
+                  </strong>
+
+                  <span>
+                    {{ item.period }}
+                  </span>
+
+                </div>
+
+                <p class="experience-list__company">
+                  {{ item.school }}
+                </p>
+
+              </li>
+
+            }
+
+          </ul>
+
+        </div>
+
+
+        <!-- SPOKEN LANGUAGES -->
+        <div class="experience-block">
+
+          <h3>
+            Spoken languages
+          </h3>
+
+          <ul class="experience-list">
+
+            @for (
+              lang of spokenLanguages;
+              track lang.name
+            ) {
+
+              <li>
+
+                <div class="experience-list__meta">
+
+                  <strong>
+                    {{ lang.name }}
+                  </strong>
+
+                  <span>
+                    {{ lang.level }}
+                  </span>
+
+                </div>
+
+              </li>
+
+            }
+
+          </ul>
+
+        </div>
+
       </div>
+
     </div>
+
   </section>
 
-  <section id="contact" class="section contact" aria-labelledby="contact-heading">
+
+  <!-- CONTACT -->
+  <section
+    id="contact"
+    class="section contact"
+    aria-labelledby="contact-heading"
+  >
+
     <div class="contact__inner">
-      <p class="section__eyebrow">Contact</p>
-      <h2 id="contact-heading">Let’s build something together</h2>
-      <p class="section__lede">
-        Open to software engineering roles and collaborations. Based in {{ location }}.
+
+      <p class="section__eyebrow">
+        Contact
       </p>
+
+      <h2 id="contact-heading">
+        Let’s build something together
+      </h2>
+
+      <p class="section__lede">
+        Open to software engineering roles and collaborations.
+        Based in {{ location }}.
+      </p>
+
       <div class="contact__actions">
-        <a class="btn btn--primary" [href]="'mailto:' + email">{{ email }}</a>
+
+        <a
+          class="btn btn--primary"
+          [href]="'mailto:' + email"
+        >
+          {{ email }}
+        </a>
+
         <div class="contact__social">
-          <a [href]="phoneHref">{{ phone }}</a>
-          <a [href]="githubUrl" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a [href]="linkedinUrl" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+          <a [href]="phoneHref">
+            {{ phone }}
+          </a>
+
+          <a
+            [href]="githubUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            [href]="linkedinUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
+
 </main>
 
+
+<!-- FOOTER -->
 <footer class="site-footer">
-  <p>© {{ fullName }} — Software Engineer</p>
-  <a href="#top">Back to top</a>
+
+  <p>
+    © {{ fullName }} — Software Engineer
+  </p>
+
+  <a href="#top">
+    Back to top
+  </a>
+
 </footer>
+
+
